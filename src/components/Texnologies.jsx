@@ -5,13 +5,18 @@ import { PiFileCssLight } from "react-icons/pi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaBold } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import i18n from "../translation/i18";
+import { IoLogoNodejs } from "react-icons/io5";
+
 
 const Technologies = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="border-b border-neutral-800 pb-24">
-      <h1 className="my-20 text-center text-4xl">Technologies</h1>
+      <h1 className="my-20 text-center text-4xl">{t("technologies")}</h1>
       <div className="flex flex-wrap justify-center gap-8">
-        {/* Each icon gets a delay in the animation */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,9 +63,10 @@ const Technologies = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <FaBold className="text-7xl text-[#646CFF]" />
+  <IoLogoNodejs className="text-[#83CD29] w-24 h-24" />
         </motion.div>
       </div>
+
     </div>
   );
 };

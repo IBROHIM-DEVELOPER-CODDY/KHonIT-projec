@@ -1,9 +1,10 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
-import okaxon from "../../public/img/photo_2024-12-21_16-38-12.jpg";
-
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="border-b border-neutral-900 pb-4">
       <motion.h1
@@ -12,7 +13,7 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-4xl"
       >
-        Projects
+        {t("projects")}
       </motion.h1>
       <div>
         {PROJECTS.map((project, index) => (
@@ -22,22 +23,13 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.5,
-              delay: index * 0.2, // Delay for each card
+              delay: index * 0.2,
             }}
             className="mb-8 flex flex-wrap lg:justify-center"
           >
-            {/* Left Side - Image */}
             <div className="w-full lg:w-1/4">
-              <img 
-                src={okaxon}
-                width={150}
-                height={150}
-                alt={project.title}
-                className="mb-6 rounded"
-              />
+             <img src="" alt="" />            
             </div>
-
-            {/* Right Side - Text */}
             <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>

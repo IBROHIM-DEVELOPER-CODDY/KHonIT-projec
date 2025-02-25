@@ -1,3 +1,4 @@
+
 export const HERO_CONTENT = [
     {
       title: "Welcome to My Portfolio",
@@ -35,15 +36,15 @@ export const HERO_CONTENT = [
 export const EXPERIENCE = [
   {
     year: "2023",
-    role: "Frontend Developer",
-    company: "Company A",
-    description: "Worked on UI development using React",
-    technologies: ["React", "JavaScript", "CSS"]
+    role: "Frontend Developers",
+    company: "Company KhonIT ",
+    description: "KhonIT Worked on UI development using React and Tailwind CSS",
+    technologies: ["React",  "Tailwind", "JavaScript", "HTML", "Python"]
   },
   {
-    year: "2024",
-    role: "Backend Developer",
-    company: "Company B",
+    year: "2024 - 2025",
+    role: "Backend Developers",
+    company: "Company KhonIT",
     description: "Developed API services using Node.js",
     technologies: ["Node.js", "Express", "MongoDB"]
   },
@@ -54,7 +55,7 @@ export const PROJECTS = [
       title: "Portfolio Website",
       description: "A personal portfolio website built with React to showcase projects and skills.",
       technologies: ["React", "CSS", "JavaScript"],
-      image: "path/to/image1.jpg", 
+      image: "", 
       link: "https://myportfolio.com", 
     },
     {
