@@ -56,7 +56,7 @@ const Technologies = () => {
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
           <RiTailwindCssFill className="text-7xl text-cyan-400" />
-        </motion.div>
+        </motion.div> 
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}

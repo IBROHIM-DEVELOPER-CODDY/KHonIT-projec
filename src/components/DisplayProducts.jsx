@@ -130,4 +130,4 @@ const DisplayProducts = () => {
   );
 };
 
-export default DisplayProducts;
+export default DisplayProducts; 
