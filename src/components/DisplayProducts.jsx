@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';  // Import ToastContainer
 import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import 'react-toastify/dist/ReactToastify.css';  // Import Toastify CSS
 
+// Fetch products from the API
 const fetchProducts = async () => {
   const response = await fetch('https://672a011d6d5fa4901b6f5382.mockapi.io/products');
   const data = await response.json();
@@ -43,7 +45,7 @@ const DisplayProducts = () => {
     try {
       // Check if all required form data is available
       if (!formData.name || !formData.phone || !formData.age) {
-        toast.error('Please fill in all required fields.');
+        toast.error('Please fill in all required fields.', { theme: "dark" }); // Dark theme for error toast
         setIsSubmitting(false);
         return;
       }
@@ -59,11 +61,11 @@ const DisplayProducts = () => {
         user_age: formData.age,
       }, 'e8oAdoKSQgYaExGfn');
 
-      toast.success('Buyurtma jo\'natildi!');
+      toast.success('Buyurtma jo\'natildi!', { theme: "dark" }); // Dark theme for success toast
       closeModal();
     } catch (error) {
       console.error('Error sending email:', error); // Log the error for debugging
-      toast.error('Jo\'natishda xatolik yuz berdi.');
+      toast.error('Jo\'natishda xatolik yuz berdi.', { theme: "dark" }); // Dark theme for error toast
       setIsSubmitting(false);
     }
   };
@@ -184,6 +186,9 @@ const DisplayProducts = () => {
           </div>
         )}
       </div>
+
+      {/* Add ToastContainer with dark theme */}
+      <ToastContainer theme="dark" />
     </motion.div>
   );
 };
